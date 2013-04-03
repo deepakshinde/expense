@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @manage_expense.title %>
+</p>
+
+<p>
+  <b>Total amount:</b>
+  <%= @manage_expense.total_amount %>
+</p>
+
+<p>
+  <b>Divide among:</b>
+  <%= @manage_expense.divide_among %>
+</p>
+
+<p>
+  <b>People paid:</b>
+  <%= @manage_expense.people_paid %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @manage_expense.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_manage_expense_path(@manage_expense) %> |
+<%= link_to 'Back', manage_expenses_path %>

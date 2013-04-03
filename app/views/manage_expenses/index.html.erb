@@ -1,0 +1,31 @@
+<h1>Listing manage_expenses</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Total amount</th>
+    <th>Divide among</th>
+    <th>People paid</th>
+    <th>Description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @manage_expenses.each do |manage_expense| %>
+  <tr>
+    <td><%= manage_expense.title %></td>
+    <td><%= manage_expense.total_amount %></td>
+    <td><%= manage_expense.divide_among %></td>
+    <td><%= manage_expense.people_paid %></td>
+    <td><%= manage_expense.description %></td>
+    <td><%= link_to 'Show', manage_expense %></td>
+    <td><%= link_to 'Edit', edit_manage_expense_path(manage_expense) %></td>
+    <td><%= link_to 'Destroy', manage_expense, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Manage expense', new_manage_expense_path %>
